@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="search_table">
+      <div class="table-content">
+        <div class="heading"><h2>User List Search</h2></div>
+        <form action="/search">
+            <input type="search"  name="user_id" placeholder="UserID">
+            <input type="submit" value="Search">
+        </form>
+        <table border="1" width="100%">
+          <tr>
+            <th>UserID</th>
+            <th>UserName</th>
+            <th>UserEmail</th>
+            <th>UserPassword</th>
+          </tr>
+        <% if (users.length > 0 ) { %> <% for ( let i = 0; i < users.length; i++ ) {
+        %>
+        <tr>
+          <td><%- users[i].user_id%></td>
+          <td><%- users[i].username%></td>
+          <td><%- users[i].email%></td>
+          <td><%- users[i].password%></td>
+        </tr>
+        <% } %> <% } else { %>
+        <tr>
+            <td>
+                Data Not Found
+            </td>
+        </tr>
+        <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

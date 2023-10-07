@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <div class="forecast-main-content">
+      <div class="admin-theme"></div>
+      <div class="location">
+        <form action="" method="POST">
+          <h2>Admin Panel(Location)</h2>
+          <input
+            type="text"
+            class="city"
+            name="city"
+            placeholder="City"
+            required
+          />
+          <input
+            type="text"
+            class="country"
+            name="country"
+            placeholder="Country"
+            required
+          />
+          <input
+            type="number"
+            class="latitude"
+            name="latitude"
+            placeholder="Latitude"
+            required
+          />
+          <input
+            type="number"
+            class="longitude"
+            name="longitude"
+            placeholder="longitude"
+            required
+          />
+          <input
+            type="text"
+            class="state"
+            name="state"
+            placeholder="State/Province"
+            required
+          />
+          <input
+            type="number"
+            class="sea-level"
+            name="seaLevel"
+            placeholder="Sea Level"
+            required
+          />
+          <input
+            type="number"
+            class="time-zone"
+            name="timeZone"
+            placeholder="Time Zone"
+            required
+          />
+          <button type="submit">Insert</button>
+        </form>
+      </div>
+      <div class="forecast">
+        <form action="" method="POST">
+          <h2>Today Temperature</h2>
+          <input
+            type="text"
+            class="date"
+            name="date"
+            placeholder=" Date: YYYY-MM-DD"
+            required
+          />
+          <input
+            type="number"
+            class="temperature"
+            name="temperature"
+            placeholder="Temperature"
+            required
+          />
+          <input
+            type="number"
+            class="feels-like"
+            name="feelsLike"
+            placeholder="Feels Like"
+            required
+          />
+          <input
+            type="number"
+            class="precipitation"
+            name="precipitation"
+            placeholder="Precipitation"
+            required
+          />
+          <input
+            type="number"
+            class="field"
+            name="field"
+            placeholder="Field"
+            required
+          />
+          <input
+            type="number"
+            class="uv-index"
+            name="uvIndex"
+            placeholder="UV Index"
+            required
+          />
+          <input
+            type="number"
+            class="humidity"
+            name="humidity"
+            placeholder="Humidity"
+            required
+          />
+          <input
+            type="number"
+            class="wind-speed"
+            name="windSpeed"
+            placeholder="Wind Speed"
+            required
+          />
+          <input
+            type="text"
+            class="wind-direction"
+            name="windDirection"
+            placeholder="Wind Direction"
+            required
+          />
+          <input
+            type="number"
+            class="air-quality"
+            name="airQuality"
+            placeholder="Air Quality"
+            required
+          />
+          <input
+            type="number"
+            class="location"
+            name="locationID"
+            placeholder="Location ID"
+            required
+          />
+          <button type="submit">Insert</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

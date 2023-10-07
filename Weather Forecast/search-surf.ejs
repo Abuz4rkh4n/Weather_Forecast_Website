@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surfing Data</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="surf-table">
+      <div class="table-content">
+        <div class="heading"><h2>Surfing Information List</h2></div>
+        <form action="/searchsurfing" method="POST">
+            <input type="search" class="surfing_id" name="surfingID" placeholder="SurfingID">
+            <button type="submit">Search</button>
+        </form>
+        <table border="1" width="100%">
+          <tr>
+            <th>SurfingID</th>
+            <th>LocationID</th>
+            <th>SurfingType</th>
+            <th>SurfingName</th>
+            <th>SwellHeights</th>
+            <th>SwellPeriod</th>
+            <th>WaterTemperature</th>
+            <th>SurfRating</th>
+          </tr>
+          <% if ( surfingdata.length > 0) { %> <% for ( let i = 0; i < surfingdata.length; i++ ) {
+            %>
+            <tr>
+              <td><%- surfingdata[i].surfing_id %></td>
+              <td><%- surfingdata[i].location_id %></td>
+              <td><%- surfingdata[i].surfing_type %></td>
+              <td><%- surfingdata[i].surfing_name %></td>
+              <td><%- surfingdata[i].swell_heights %></td>
+              <td><%- surfingdata[i].swell_period %></td>
+              <td><%- surfingdata[i].water_temperature %></td>
+              <td><%- surfingdata[i].surf_rating %></td>
+            </tr>
+            <% } %>
+          <% } else { %>
+            <tr><td>No Data Available</td></tr>
+            <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

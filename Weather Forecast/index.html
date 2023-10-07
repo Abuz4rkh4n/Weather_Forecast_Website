@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/style.css" />
+
+    <title>Weather Forecast Website</title>
+  </head>
+  <body>
+    <div class="main">
+      <header>
+        <div class="top-header">
+          <!-- Logo -->
+          <div class="logo">
+            <img src="images/weather-logo.png" alt="" />
+          </div>
+          <!-- Search Bar -->
+          <div class="search">
+            <input
+              type="text"
+              class="search-input"
+              placeholder="Search Your City"
+            />
+            <button type="submit" class="search-button">
+              <img src="images/magnifying-glass.png" alt="" />
+            </button>
+          </div>
+          <div class="login">
+            <button><a href="/login">log In</a></button>
+          </div>
+          <!-- Main Menu -->.
+          <div class="main-menu">
+            <div class="menu-left">
+              <div class="menu home">
+                <img src="images/home-icon-silhouette.png" alt="" />
+                <a href="#">Home</a>
+              </div>
+              <div class="menu news">
+                <img src="images/news (1).png" alt="" />
+                <a href="#">News</a>
+              </div>
+              <div class="menu articles">
+                <img src="images/news (2).png" alt="" />
+                <a href="#">Articles</a>
+              </div>
+            </div>
+            <div class="menu-right">
+              <div class="menu images">
+                <img src="images/image.png" alt="" />
+                <a href="#">Images</a>
+              </div>
+              <div class="menu videos">
+                <img src="images/play-button.png" alt="" />
+                <a href="#">Videos</a>
+              </div>
+              <div class="menu about-us">
+                <img src="images/information-button.png" alt="" />
+                <a href="#">About us</a>
+              </div>
+            </div>
+          </div>
+          <!-- Bar Icon -->
+          <div class="bar-icon">
+            <a href="#" class="toggle-bar">
+              <img src="images/menu.png" alt="" />
+            </a>
+          </div>
+        </div>
+      </header>
+      <div class="front-weather">
+        <!-- Background -->
+        <video playsinline autoplay muted loop poster class="back-video">
+          <source src="videos/cloudy.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <!-- Current Location -->
+        <div class="current-location">
+          <h3 class="province">Balouchistan</h3>
+          <h3 class="country">Pakistan</h3>
+        </div>
+        <!-- Current day Weather -->
+        <div class="location-weather">
+          <div class="current-information">
+            <h3 class="city">Quetta</h3>
+            <span class="information feel-like"
+              ><img src="images/hot.png" alt="" />Feels like 20°</span
+            >
+            <span class="information wind-speed"
+              ><img src="images/wind (1).png" alt="" />18 Km/h</span
+            >
+            <span class="information humidity"
+              ><img src="images/humidity (1).png" alt="" />86%</span
+            >
+            <span class="information wind-pressure"
+              ><img src="images/pressure.png" alt="" />1009mb</span
+            >
+            <span class="information uv-index"
+              ><img src="images/uv.png" alt="" />Weaker</span
+            >
+          </div>
+          <div class="today-weather">
+            <!-- <div class="design-shape"></div> -->
+            <span class="current-date">
+              <h3 class="day">Mon</h3>
+              <h3 class="date">17 June</h3>
+            </span>
+            <h3 class="weather-type">Partly Cloudy</h3>
+            <h3 class="current-temperature">25</h3>
+            <h3 class="degree">°</h3>
+            <img src="images/sun.png" alt="" />
+          </div>
+          <div class="weekly-weather">
+            <span class="day 1-day"
+              ><img src="images/cloudy (1).png" alt="" />
+              <h3 class="week 1-day">Tue</h3>
+              <h3 class="type 1-day">Rain</h3>
+              <h3 class="temperature 1-day">20°</h3>
+            </span>
+            <span class="day 2-day"
+              ><img src="images/sun.png" alt="" />
+              <h3 class="week 2-day">Wed</h3>
+              <h3 class="type 2-day">Sunny</h3>
+              <h3 class="temperature 2-day">30°</h3>
+            </span>
+            <span class="day 3-day"
+              ><img src="images/cloudy-day.png" alt="" />
+              <h3 class="week 3-day">Thu</h3>
+              <h3 class="type 3-day">Partly Cloudy</h3>
+              <h3 class="temperature 3-day">25°</h3>
+            </span>
+            <span class="day 4-day"
+              ><img src="images/cloudy (1).png" alt="" />
+              <h3 class="week 4-day">Fri</h3>
+              <h3 class="type 4-day">Rain</h3>
+              <h3 class="temperature 4-day">28°</h3>
+            </span>
+            <span class="day 5-day"
+              ><img src="images/sun.png" alt="" />
+              <h3 class="week 5-day">Sat</h3>
+              <h3 class="type 5-day">Sunny</h3>
+              <h3 class="temperature 5-day">30°</h3>
+            </span>
+            <span class="day 6-day"
+              ><img src="images/cloudy-day.png" alt="" />
+              <h3 class="week 6-day">Sun</h3>
+              <h3 class="type 6-day">Partly Cloudy</h3>
+              <h3 class="temperature 6-day">23°</h3>
+            </span>
+          </div>
+        </div>
+      </div>
+      <!-- Main Media -->
+      <div class="main-media">
+        <div class="theme-design"></div>
+        <div class="headings">
+          <h2>Images</h2>
+          <h2 class="articles">Articles</h2>
+          <h2>Videos</h2>
+        </div>
+        <div class="media-gallery">
+          <!-- Images Section -->
+          <div class="images">
+            <img src="Gallery-Images/Blue-Sunset.jpg" alt="" />
+            <img src="Gallery-Images/Pine-Trees.jpg" alt="" />
+            <img src="Gallery-Images/Snowy-Mountains.jpg" alt="" />
+          </div>
+          <!-- Articles -->
+          <div class="articles-portion">
+            <div class="article article-1">
+              <img src="Articles/Camels.jpg" alt="" />
+              <a href="#">Review Articles</a>
+            </div>
+            <div class="article article-2">
+              <img src="Articles/Camping.jpg" alt="" />
+              <a href="#">Original Review Articles</a>
+            </div>
+            <div class="article article-3">
+              <img src="Articles/Traveler.jpg" alt="" />
+              <a href="#">Theoretical Articles</a>
+            </div>
+          </div>
+          <!-- Videos -->
+          <div class="videos-portion">
+            <video autoplay loop src="videos/Rainy.mp4"></video>
+            <video autoplay loop src="videos/Sunny.mp4"></video>
+            <video autoplay loop src="videos/Rainy-afternoon.mp4"></video>
+          </div>
+        </div>
+      </div>
+      <!-- Map -->
+      <div class="map-portion">
+        <div class="theme-design"></div>
+        <div class="satllite-map">
+          <h2>Map</h2>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d216618.3435399946!2d66.97686054695619!3d30.222621203710926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2s!4v1687852574120!5m2!1sen!2s"
+            width="1200"
+            height="580"
+            stsyle="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <script src="script/script.js"></script>
+  </body>
+</html>

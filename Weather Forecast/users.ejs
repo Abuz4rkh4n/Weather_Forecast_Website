@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registered Users</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="user-table">
+      <div class="table-content">
+        <div class="heading"><h2>Users List</h2></div>
+        <table border="1" width="100%">
+          <tr>
+            <th>UserID</th>
+            <th>UserName</th>
+            <th>UserEmail</th>
+            <th>UserPassword</th>
+            <th>Actions</th>
+          </tr>
+        <% if (users.length > 0 ) { %> <% for ( let i = 0; i < users.length; i++ ) {
+        %>
+        <tr>
+          <td><%- users[i].user_id%></td>
+          <td><%- users[i].username%></td>
+          <td><%- users[i].email%></td>
+          <td><%- users[i].password%></td>
+          <td><a href="/delete-user?user_id=<%- users[i].user_id%>">Delete</a>
+            <a href="/update-user?user_id=<%- users[i].user_id%>">update</a></td>
+        </tr>
+        <% } %> <% } else { %>
+        <h2>No User Has Been Registered</h2>
+        <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Update User</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="update-forecast-main-content">
+      <div class="admin-theme"></div>
+      <div class="update-forecast">
+        <form action="" method="POSt">
+          <h2>Admin Panel (Update forecast Information)</h2>
+          <input
+            type="number"
+            class="forecast_id"
+            name="forecastID"
+            value="<%- forecastdata[0].forecast_id%>"
+            placeholder="forecastID"
+            required
+          />
+          <input
+            type="text"
+            class="forecast_date"
+            name="forecastDate"
+            value="<%- forecastdata[0].forecast_date%>"
+            placeholder="Date: YYYY-MM-DD"
+            required
+          />
+          <input
+            type="number"
+            class="temperature"
+            name="temperature"
+            value="<%- forecastdata[0].temperature%>"
+            placeholder="Temperature"
+            required
+          />
+          <input
+            type="number"
+            class="feels_like"
+            name="feelsLike"
+            value="<%- forecastdata[0].feels_like%>"
+            placeholder="Feels_like"
+            required
+          />
+          <input
+            type="number"
+            class="precipitation"
+            name="precipitation"
+            value="<%- forecastdata[0].precipitation%>"
+            placeholder="Precipitation"
+            required
+          />
+          <input
+            type="number"
+            class="field"
+            name="field"
+            value="<%- forecastdata[0].field%>"
+            placeholder="Field"
+            required
+          />
+          <input
+            type="number"
+            class="uv_index"
+            name="uvIndex"
+            value="<%- forecastdata[0].uv_index%>"
+            placeholder="UVIndex"
+            required
+          />
+          <input
+            type="number"
+            class="humidity"
+            name="humidity"
+            value="<%- forecastdata[0].humidity%>"
+            placeholder="Humidity"
+            required
+          />
+          <input
+            type="number"
+            class="wind_speed"
+            name="windSpeed"
+            value="<%- forecastdata[0].wind_speed%>"
+            placeholder="WindSpeed"
+            required
+          />
+          <input
+            type="text"
+            class="wind_direction"
+            name="windDirection"
+            value="<%- forecastdata[0].wind_direction%>"
+            placeholder="WindDirection"
+            required
+          />
+          <input
+            type="number"
+            class="air_quality"
+            name="airQuality"
+            value="<%- forecastdata[0].air_quality%>"
+            placeholder="AirQuality"
+            required
+          />
+          <input
+            type="number"
+            class="location_id"
+            name="locationID"
+            value="<%- forecastdata[0].location_id%>"
+            placeholder="LocationID"
+            required
+          />
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

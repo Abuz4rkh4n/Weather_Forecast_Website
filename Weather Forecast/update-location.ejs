@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Update User</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="update-surf-main-content">
+      <div class="admin-theme"></div>
+      <div class="update-surf">
+        <form action="" method="POSt">
+          <h2>Admin Panel (Update Location Information)</h2>
+          <input
+            type="number"
+            class="location_id"
+            name="locationID"
+            value="<%- locationdata[0].location_id%>"
+            placeholder="LocationID"
+            required
+          />
+          <input
+            type="text"
+            class="city"
+            name="city"
+            value="<%- locationdata[0].city%>"
+            placeholder="City"
+            required
+          />
+          <input
+            type="text"
+            class="country"
+            name="country"
+            value="<%- locationdata[0].country%>"
+            placeholder="Country"
+            required
+          />
+          <input
+            type="number"
+            class="latitude"
+            name="latitude"
+            value="<%- locationdata[0].latitude%>"
+            placeholder="Latitude"
+            required
+          />
+          <input
+            type="number"
+            class="longitude"
+            name="longitude"
+            value="<%- locationdata[0].longitude%>"
+            placeholder="Longitude"
+            required
+          />
+          <input
+            type="text"
+            class="state"
+            name="state"
+            value="<%- locationdata[0].state%>"
+            placeholder="State"
+            required
+          />
+          <input
+            type="number"
+            class="sea_level"
+            name="seaLevel"
+            value="<%- locationdata[0].sea_level%>"
+            placeholder="Sea Level"
+            required
+          />
+          <input
+            type="text"
+            class="time_zone"
+            name="timeZone"
+            value="<%- locationdata[0].time_zone%>"
+            placeholder="Time Zone"
+            required
+          />
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

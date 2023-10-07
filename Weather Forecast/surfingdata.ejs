@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surfing Data</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="user-table">
+      <div class="table-content">
+        <div class="heading"><h2>Surfing Information List</h2></div>
+        <table border="1" width="100%">
+          <tr>
+            <th>SurfingID</th>
+            <th>LocationID</th>
+            <th>SurfingType</th>
+            <th>SurfingName</th>
+            <th>SwellHeights</th>
+            <th>SwellPeriod</th>
+            <th>WaterTemperature</th>
+            <th>SurfRating</th>
+            <th>Actions</th>
+          </tr>
+          <% if ( surfingdata.length > 0) { %> <% for ( let i = 0; i < surfingdata.length; i++ ) {
+            %>
+            <tr>
+              <td><%- surfingdata[i].surfing_id %></td>
+              <td><%- surfingdata[i].location_id %></td>
+              <td><%- surfingdata[i].surfing_type %></td>
+              <td><%- surfingdata[i].surfing_name %></td>
+              <td><%- surfingdata[i].swell_heights %></td>
+              <td><%- surfingdata[i].swell_period %></td>
+              <td><%- surfingdata[i].water_temperature %></td>
+              <td><%- surfingdata[i].surf_rating %></td>
+              <td><a href="/delete-surf?surfing_id=<%- surfingdata[i].surfing_id%>">Delete</a>
+                <a href="/update-surf?surfing_id=<%- surfingdata[i].surfing_id%>">Update</a></td>
+            </tr>
+            <% } %>
+          <% } else { %>
+            <h2>No Surfing Information Has Been Entered!</h2>
+            <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

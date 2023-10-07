@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Article</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+    <div class="article-main-content">
+        <div class="admin-theme"></div>
+      <div class="article">
+        <form action="" method="POST">
+          <h2>Admin Panel(Article)</h2>
+          <input
+            type="text"
+            class="article-title"
+            name="articleTitle"
+            placeholder="Article Title"
+            required
+          />
+          <input type="text" class="author" name="author" placeholder="Author" required />
+          <input type="text" class="publish-date" name="publishDate" placeholder="Date: YYYY-MM-DD" required />
+          <input
+            type="text"
+            class="article-topic"
+            name="articleTopic"
+            placeholder="Article Topic"
+            required
+          />
+          <input
+            type="number"
+            class="user-id"
+            name="userID"
+            placeholder="User ID"
+            required
+          /> <br>
+          <input
+            type="text"
+            class="description"
+            name="description"
+            placeholder="Description"
+            required
+          />
+          <button type="submit">Insert</button>
+        </form>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surfing Data</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="forecast-table">
+      <div class="table-content">
+        <div class="heading"><h2>Forecast Information List</h2></div>
+        <table border="1" width="100%">
+          <tr>
+            <th>ForecastID</th>
+            <th>ForecasteDate</th>
+            <th>Temperature</th>
+            <th>FeelsLike</th>
+            <th>Precipitation</th>
+            <th>Field</th>
+            <th>UVIndex</th>
+            <th>Humidity</th>
+            <th>WindSpeed</th>
+            <th>WindDirection</th>
+            <th>AirQuality</th>
+            <th>LocationID</th>
+            <th>Actions</th>
+          </tr>
+          <% if ( forecastdata.length > 0) { %> <% for ( let i = 0; i < forecastdata.length; i++ ) {
+            %>
+            <tr>
+              <td><%- forecastdata[i].forecast_id %></td>
+              <td><%- forecastdata[i].forecast_date %></td>
+              <td><%- forecastdata[i].temperature %></td>
+              <td><%- forecastdata[i].feels_like %></td>
+              <td><%- forecastdata[i].precipitation %></td>
+              <td><%- forecastdata[i].field %></td>
+              <td><%- forecastdata[i].uv_index %></td>
+              <td><%- forecastdata[i].humidity %></td>
+              <td><%- forecastdata[i].wind_speed %></td>
+              <td><%- forecastdata[i].wind_direction %></td>
+              <td><%- forecastdata[i].air_quality %></td>
+              <td><%- forecastdata[i].location_id %></td>
+              <td><a href="/delete-forecast?forecast_id=<%- forecastdata[i].forecast_id %>">Delete</a>
+                <a href="/update-forecast?forecast_id=<%- forecastdata[i].forecast_id %>">Update</a></td>
+            </tr>
+            <% } %>
+          <% } else { %>
+            <h2>No Surfing Information Has Been Entered!</h2>
+            <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

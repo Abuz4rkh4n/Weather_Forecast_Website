@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/style.css" />
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="sign-up">
+      <div class="signup-portion">
+        <div class="signup-theme"></div>
+        <form action="" method="POST">
+          <div class="user-input">
+            <button class="log-in"><a href="/login">Log In</a></button>
+            <img src="images/log-in.png" alt="" class="sign-image" />
+            <h2>SIGN UP</h2>
+            <div class="info user-name">
+              <img src="images/avatar.png" alt="" />
+              <input
+                type="name"
+                class="input email"
+                placeholder="Username"
+                name="name"
+                required
+              />
+            </div>
+            <div class="info email-address">
+              <img src="images/mail.png" alt="" />
+              <input
+                type="email"
+                class="input name"
+                placeholder="Email Address"
+                name="email"
+                required
+              />
+            </div>
+            <div class="info user-password">
+              <img src="images/padlock.png" alt="" />
+              <input
+                type="password"
+                class="input password"
+                placeholder="Password"
+                name="password"
+                required
+              />
+            </div>
+            <h3 class="error-message">The email is already been registered!</h3>
+            <div class="user-buttons">
+              <button type="submit">Sign Up</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Update User</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="update-surf-main-content">
+      <div class="admin-theme"></div>
+      <div class="update-surf">
+        <form action="" method="POSt">
+          <h2>Admin Panel (Update Surf Information)</h2>
+          <input
+            type="number"
+            class="surfing_id"
+            name="surfingID"
+            value="<%- surfingdata[0].surfing_id%>"
+            placeholder="SurfingID"
+            required
+          />
+          <input
+            type="number"
+            class="location_id"
+            name="locationID"
+            value="<%- surfingdata[0].location_id%>"
+            placeholder="LocationID"
+            required
+          />
+          <input
+            type="text"
+            class="surfing_type"
+            name="surfingType"
+            value="<%- surfingdata[0].surfing_type%>"
+            placeholder="Surfing Type"
+            required
+          />
+          <input
+            type="text"
+            class="surfing_name"
+            name="surfingName"
+            value="<%- surfingdata[0].surfing_name%>"
+            placeholder="Surfing Name"
+            required
+          />
+          <input
+            type="text"
+            class="swell_heights"
+            name="swellHeights"
+            value="<%- surfingdata[0].swell_heights%>"
+            placeholder="Swell Heights"
+            required
+          />
+          <input
+            type="text"
+            class="swell_period"
+            name="swellPeriod"
+            value="<%- surfingdata[0].swell_period%>"
+            placeholder="Surfing Period"
+            required
+          />
+          <input
+            type="text"
+            class="water_temperature"
+            name="waterTemperature"
+            value="<%- surfingdata[0].water_temperature%>"
+            placeholder="Water Temperature"
+            required
+          />
+          <input
+            type="text"
+            class="surf_rating"
+            name="surfRating"
+            value="<%- surfingdata[0].surf_rating%>"
+            placeholder="Surf Rating"
+            required
+          />
+          <button type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

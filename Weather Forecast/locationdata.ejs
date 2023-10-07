@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Surfing Data</title>
+    <link rel="stylesheet" href="public/style.css" />
+  </head>
+  <body>
+    <div class="location-table">
+      <div class="table-content">
+        <div class="heading"><h2>Location Information List</h2></div>
+        <table border="1" width="100%">
+          <tr>
+            <th>location_id</th>
+            <th>City</th>
+            <th>Country</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>State/Province</th>
+            <th>SeaLevel</th>
+            <th>TimeZone</th>
+            <th>Actions</th>
+          </tr>
+          <% if ( locationdata.length > 0) { %> <% for ( let i = 0; i < locationdata.length; i++ ) {
+            %>
+            <tr>
+              <td><%- locationdata[i].location_id %></td>
+              <td><%- locationdata[i].city %></td>
+              <td><%- locationdata[i].country %></td>
+              <td><%- locationdata[i].latitude %></td>
+              <td><%- locationdata[i].longitude %></td>
+              <td><%- locationdata[i].state %></td>
+              <td><%- locationdata[i].sea_level %></td>
+              <td><%- locationdata[i].time_zone %></td>
+              <td><a href="/delete-location?location_id=<%- locationdata[i].location_id%>">Delete</a>
+                <a href="/update-location?location_id=<%- locationdata[i].location_id%>">Update</a></td>
+            </tr>
+            <% } %>
+          <% } else { %>
+            <h2>No Location Information Has Been Entered!</h2>
+            <% } %>
+        <table>
+      </div>
+    </div>
+  </body>
+</html>

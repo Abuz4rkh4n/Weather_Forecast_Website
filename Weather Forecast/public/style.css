@@ -1,0 +1,771 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  /* background-color: blueviolet; */
+  height: 100vh;
+}
+
+.front-weather {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  font-family: "Inter";
+  /* background-image: url(images/desert.jpg); */
+  background-size: cover;
+  background: linear-gradient(
+    90deg,
+    rgba(116, 10, 10, 0.19940476190476186) 0%,
+    rgba(116, 10, 10, 0.04534313725490191) 50%,
+    rgba(116, 10, 10, 0.19940476190476186) 100%
+  );
+}
+
+.front-weather video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.current-location {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.current-location h3 {
+  display: inline;
+  padding: 3px;
+  font-weight: 800;
+}
+
+.location-weather {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.today-weather {
+  width: 25rem;
+  height: 20rem;
+  position: relative;
+  top: -6rem;
+  flex-grow: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(116, 10, 10, 0.49);
+  border-radius: 40%;
+  margin: 2rem;
+  padding: 0;
+}
+
+/* Polygon Shape Design --> Today Weather */
+
+/* .today-weather .design-shape {
+  position: absolute;
+  border-radius: 40%;
+  width: 20rem;
+  height: 20rem;
+  transform: scale(0.99deg);
+  background-color: #cb1fce;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 62%, 25% 43%, 0 18%);
+  clip-path: polygon(0 0, 100% 0, 100% 62%, 25% 43%, 0 18%);
+} */
+
+.today-weather img {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  bottom: 8rem;
+}
+
+.today-weather .current-date h3 {
+  padding: 5px;
+  display: inline;
+}
+
+.today-weather .weather-type {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.current-date {
+  width: 10rem;
+  height: 5rem;
+  position: relative;
+  top: -0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(217, 217, 217, 0.33);
+  border-radius: 5rem;
+  padding: 0.5rem;
+}
+
+.current-temperature {
+  position: relative;
+  /* top: 6rem; */
+  margin: 0 2rem;
+  padding: 0;
+  font-weight: 800;
+  font-size: 12rem;
+}
+
+.current-information {
+  width: 40%;
+  height: 80vh;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(217, 217, 217, 0.33);
+  border-radius: 7rem;
+  /* flex-grow: 1; */
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+/* .current-information img {
+  width: 72px;
+  height: 72px;
+  position: relative;
+  left: -1rem;
+} */
+
+.weekly-weather {
+  width: 40%;
+  height: 80vh;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: rgba(217, 217, 217, 0.33);
+  border-radius: 7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 1rem;
+  /* flex-grow: 1; */
+}
+
+.weekly-weather img,
+.current-information img,
+.current-information .city {
+  width: 5rem;
+  height: 5rem;
+  margin: 0 2rem 0 3rem;
+}
+
+.weekly-weather .day {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.weekly-weather .temperature,
+.weekly-weather .week {
+  font-size: 2rem;
+  margin: 0 0.5rem;
+}
+
+.current-information .information {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+  font-size: 1.5rem;
+}
+.weekly-weather h3 {
+  padding: 2px;
+  display: inline;
+}
+
+.current-information .city {
+  font-size: 3rem;
+}
+
+.current-location {
+  font-size: 2.5rem;
+}
+
+.current-information .city {
+  position: relative;
+  left: 5rem;
+}
+
+/* Header Styling */
+
+header {
+  position: relative;
+}
+
+.top-header {
+  width: 100%;
+  height: 70px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(217, 217, 217, 0.55);
+  box-shadow: 5px 5px 50px grey;
+  z-index: 99;
+}
+
+.top-header .logo img {
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-left: 2rem;
+  margin-right: 25rem;
+}
+
+.top-header .search img {
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+.top-header .search {
+  position: relative;
+  margin-right: 19rem;
+}
+
+.top-header .search-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(116, 10, 10, 0.49);
+  transform: scale(0.9);
+}
+
+.top-header input {
+  width: 500px;
+  height: 45px;
+  border-radius: 5rem;
+  border: none;
+  background-color: rgba(217, 217, 217, 0.88);
+  text-align: center;
+  font-family: "Inter" sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+}
+
+header .main-menu {
+  position: absolute;
+  top: 70px;
+  right: 0;
+}
+
+header .menu {
+  width: 15rem;
+  height: 9rem;
+  margin: 5px;
+  background-color: aqua;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  margin: 2rem;
+  background-color: rgba(116, 10, 10, 0.49);
+}
+
+header .main-menu {
+  width: 700px;
+  height: 600px;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 99;
+  background-color: rgba(217, 217, 217, 0.55);
+  transition: all 1s ease-in;
+  display: none;
+}
+
+header .main-menu.open {
+  display: flex;
+}
+.front-weather.open {
+  transition: all 0.1s ease-out;
+  filter: blur(7px);
+  -webkit-filter: blur(7px);
+}
+
+header .main-menu a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: black;
+}
+
+header .main-menu img {
+  width: 50px;
+  height: 50px;
+  padding-right: 1rem;
+}
+
+header .bar-icon img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+/* Theme Design */
+
+.main-media,
+.map-portion {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(216, 91, 18, 0.747), rgba(34, 31, 29, 0.2));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-design,
+.admin-theme {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(203, 31, 206, 0.408);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 62%, 25% 43%, 0 18%);
+  clip-path: polygon(0 0, 100% 0, 100% 62%, 25% 43%, 0 18%);
+}
+
+/* Gallery */
+
+.media-gallery {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.media-gallery .images,
+.articles-portion,
+.videos-portion {
+  height: 80vh;
+  width: 30%;
+  border-radius: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  background-color: rgba(217, 217, 217, 0.55);
+}
+
+.main-media .headings {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* .main-media .headings .articles {
+  margin: 2rem 17rem 0 17rem;
+} */
+
+.main-media h2,
+.map-portion .satllite-map h2 {
+  font-family: "Inter";
+  font-size: 2.25rem;
+  font-weight: 800;
+  z-index: 99;
+  margin-top: 2rem;
+}
+
+.media-gallery .images img,
+.videos-portion video {
+  width: 16rem;
+  height: 9rem;
+  border-radius: 2.2rem;
+  margin: 1rem;
+  transform: scale(1.15);
+}
+
+.articles-portion .article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.articles-portion .article a {
+  text-decoration: none;
+  font-family: "Inter";
+  color: black;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.articles-portion img {
+  width: 16rem;
+  height: 9rem;
+  border-radius: 2.2rem;
+  transform: scale(1.1);
+}
+
+/* Map */
+
+.map-portion {
+  top: 200%;
+}
+
+.map-portion .satllite-map {
+  width: 90%;
+  height: 90vh;
+  background-color: rgba(217, 217, 217, 0.55);
+  border-radius: 5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-portion .satllite-map iframe {
+  border-radius: 4rem;
+}
+
+.map-portion .satllite-map h2 {
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Login Page and Sign Up Page */
+
+.login,
+.sign-up {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login img,
+.sign-up img {
+  width: 60px;
+}
+
+.login .login-portion,
+.sign-up .signup-portion {
+  width: 30%;
+  height: 75vh;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(216, 91, 18, 0.747), rgba(34, 31, 29, 0.2));
+}
+
+.login-theme,
+.signup-theme {
+  position: absolute;
+  border-radius: inherit;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(203, 31, 206, 0.408);
+  -webkit-clip-path: polygon(100% 0, 100% 50%, 15% 39%, 0 24%, 0 0);
+  clip-path: polygon(100% 0, 100% 50%, 15% 39%, 0 24%, 0 0);
+}
+
+.login .user-input,
+.sign-up .user-input {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login .user-input .info img,
+.sign-up .user-input .info img {
+  width: 30px;
+  height: 30px;
+}
+
+.login .user-input .info,
+.login .user-input .user-buttons,
+.sign-up .user-input .info,
+.sign-up .user-input .user-buttons {
+  width: 25rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login .info input,
+.sign-up .info input {
+  width: 18rem;
+  height: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 50px;
+  border: none;
+  font-family: "Inter";
+  font-weight: 500;
+  padding-left: 1rem;
+  outline: none;
+}
+
+.login button,
+.sign-up button {
+  width: 9rem;
+  height: 2.5rem;
+  background-color: rgba(203, 31, 206, 0.408);
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+
+.login .sign-up,
+.sign-up .log-in {
+  position: absolute;
+  top: -5.5rem;
+  right: 0rem;
+  background: linear-gradient(
+    rgba(217, 162, 131, 0.88),
+    rgba(230, 179, 150, 1)
+  );
+}
+
+.login h2,
+.sign-up h2 {
+  margin: 1rem 0 3rem 0;
+  font-family: "Inter";
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.login .forget {
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 15px;
+  cursor: pointer;
+  color: rgb(95, 12, 97);
+}
+
+.login .forget:hover,
+.login button:hover,
+.sign-up button:hover {
+  font-weight: 500;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.login .user-buttons,
+.sign-up .user-buttons {
+  align-items: center;
+}
+
+/* Sign Up Page Design */
+
+.sign-up .log-in {
+  top: -1.3rem;
+  right: -0.5rem;
+}
+
+.sign-up .sign-image {
+  margin-top: 4rem;
+}
+
+.sign-up .log-in a,
+.login .sign-up a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  color: aliceblue;
+}
+
+header .login a {
+  text-decoration: none;
+  font: "Inter";
+  color: aliceblue;
+  font-size: 1rem;
+}
+
+.error-message {
+  font-family: "Inter";
+  font-size: 1rem;
+  color: rgb(241, 65, 65);
+  margin-bottom: 1rem;
+  display: none;
+}
+
+/* Admin Panel */
+
+.admin-panel {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(216, 91, 18, 0.747), rgba(34, 31, 29, 0.2));
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-panel .option {
+  width: 25rem;
+  height: 10vh;
+  display: flex;
+  background-color: rgba(217, 217, 217, 0.55);
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+}
+
+.admin-panel .content,
+.forecast-main-content .location,
+.surfing-main-content .surfing,
+.article-main-content .article,
+.update-user-main-content .update-user,
+.update-surf-main-content .update-surf,
+.update-forecast-main-content .update-forecast {
+  z-index: 99999;
+}
+
+.admin-panel a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 900;
+}
+
+.admin-panel h2 {
+  font-family: "Inter";
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+/* Forecast Admin Panel and Surfing Admin Panel and Article Admin Panel */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all-options {
+  display: flex;
+  flex-direction: row;
+}
+
+.content .option {
+  margin: 1rem;
+}
+
+.forecast-main-content,
+.surfing-main-content,
+.article-main-content,
+.update-user-main-content,
+.update-surf-main-content,
+.update-forecast-main-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(216, 91, 18, 0.747), rgba(34, 31, 29, 0.2));
+}
+
+.forecast-main-content input,
+.surfing-main-content input,
+.article-main-content input,
+.update-user-main-content input,
+.update-surf-main-content input,
+.update-forecast-main-content input {
+  width: 27rem;
+  height: 3rem;
+  border-radius: 50px;
+  background-color: rgba(217, 217, 217, 0.55);
+  border: none;
+  font-family: "Inter";
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
+  outline: none;
+}
+
+.forecast-main-content h2,
+.surfing-main-content h2,
+.article-main-content h2,
+.update-user-main-content h2,
+.update-surf-main-content h2,
+.update-forecast-main-content h2 {
+  font-family: "Inter";
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 2rem;
+  margin-left: 1rem;
+}
+
+.forecast-main-content button,
+.surfing-main-content button,
+.article-main-content button,
+.update-user-main-content button,
+.update-surf-main-content button,
+.update-forecast-main-content button {
+  width: 10rem;
+  height: 3rem;
+  border-radius: 50px;
+  border: none;
+  font: "Inter";
+  font-size: 1rem;
+  font-weight: 600;
+  color: aliceblue;
+  background-color: rgb(63, 63, 250);
+  margin-left: 1rem;
+}
+
+.article-main-content .description {
+  width: 93%;
+  padding-bottom: 48vh;
+  padding-top: 2vh;
+}
+
+.article-main-content button {
+  margin-top: 1rem;
+}
+
+.user-table {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(216, 91, 18, 0.747), rgba(34, 31, 29, 0.2));
+}
+
+.user-table h2 {
+  font-family: "Inter";
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.user-table .heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
